@@ -7,13 +7,13 @@
   DTS:CreatorName="SAMPLEDOMAIN\sampleuser"
   DTS:DTSID="{573DD8B2-5FCC-4FF8-9711-5E64A65795DE}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{9AF0F7AC-777E-41BF-81EE-C6FB74DAE74D}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{10D9E9C2-D1D8-41C4-B44C-BCE2D9588798}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\SSIS\Product data.csv">
+          DTS:ConnectionString="C:\Users\shuard\Documents\GitHub\MyFirstSSIS\SSIS\Product data.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Product code"
-              DTS:DTSID="{29D7BA32-577E-4795-9126-270C8EBB7562}"
+              DTS:DTSID="{28F282D8-9C23-418E-91CB-353F5598456F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Shipping Weight"
-              DTS:DTSID="{2D7D85B9-6778-4ED6-9A12-FC39068231CF}"
+              DTS:DTSID="{9FFD6D40-8395-449B-BD07-1EC6A8577061}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Shipping Length"
-              DTS:DTSID="{458A9E43-02F4-4F2F-9DBA-39CDFD72F70C}"
+              DTS:DTSID="{96776C92-A7FD-4503-BEF4-3CAEACB3E467}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Shipping Width"
-              DTS:DTSID="{D2616550-D04C-45F3-B0AE-7F5BD2DCA4D1}"
+              DTS:DTSID="{9D7E1146-009D-4C0C-B643-29551ADB4538}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +71,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Shipping Height"
-              DTS:DTSID="{1CDBC552-FE25-4CA0-A95E-A5AD3FFA1D17}"
+              DTS:DTSID="{CFA9638F-26D2-472D-8D19-4891DB773F32}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,7 +79,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Unit Cost"
-              DTS:DTSID="{528B32A3-64C0-4355-A2E9-370A6F94E0BF}"
+              DTS:DTSID="{FE83B989-E8D1-4807-8EF6-7FB204F28ABA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Per Order"
-              DTS:DTSID="{B3C14131-C7E2-4E32-841C-6EF9792E3801}"
+              DTS:DTSID="{C8A9C82B-87AD-4A96-9BA3-D23B69E84FF3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -101,6 +101,16 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=.;Initial Catalog=SSISSample;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[uda-equisoft.maintenanceDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1938E400-D98E-47CB-A84F-E9C542BBEFFE}"
+      DTS:ObjectName="uda-equisoft.maintenanceDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=uda-equisoft;Initial Catalog=maintenanceDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -122,7 +132,7 @@
           <components>
             <component
               refId="Package\Data Flow Task\Flat File Source"
-              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              componentClassID="DTSAdapter.FlatFileSource.3"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
@@ -355,7 +365,7 @@
             </component>
             <component
               refId="Package\Data Flow Task\OLE DB Destination"
-              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              componentClassID="DTSAdapter.OLEDBDestination.3"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
               name="OLE DB Destination"
@@ -391,7 +401,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -412,8 +422,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.SSISSample]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISSample]"
+                  connectionManagerID="Package.ConnectionManagers[uda-equisoft.maintenanceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[uda-equisoft.maintenanceDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -539,19 +549,19 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
 <Objects
   Version="sql11">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="152,42"
+          Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="35.5,35.5" />
       </GraphLayout>
@@ -563,13 +573,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
           Size="172,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="11.5,114.5" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="81.5,47.5">
